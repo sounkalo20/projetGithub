@@ -3,10 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./lib/fontawesome/css/all.css">
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projet Github</title>
 </head>
 <body>
-    
+    <header class="title" id="title">
+        <div class="name">
+            <div class="image"></div>
+            <div class="image"></div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="zone">
+            <form class="input-box">
+                <input type="text" placeholder="username...">
+                <span class="icon">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                </span>
+                <i class="fa-solid fa-xmark close-icon"></i>
+            </form>
+            <div class="profil">
+                    <div class="image"><img src="logo.png" alt=""></div>
+                    <div class="description">
+                        <h2 class="name">Nom</h2>
+                        <p class="bio"> <b>Bio:</b> <br>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut qui ab aliquid saepe eaque esse 
+                        </p>
+                        <div class="follow">
+                            <span>10 <i class="fa fa-heart"></i></span><span>20<i class="fa fa-heart"></i></span><span>30 <i class="fa-solid fa-book"></i></span>
+                        </div>
+                        <div class="project">
+                            <span>projet1</span>  <span>projet2</span>  <span>projet2</span>  
+                            <span>projet2</span>  <span>projet1</span>  <span>projet1</span>
+                        </div>
+                    </div>
+                   
+            </div>
+        </div>
+        <div class="historique">
+            <div class="top">
+                <div class="color"></div>
+            </div>
+        </div>
+    </div>
+    <div class="params">
+        <div class="tools">
+            <i class="fa-sharp fa-solid fa-wifi"></i>
+            <i class="fa-solid fa-gear"></i>
+            <i class="fa-solid fa-user"></i>
+        </div>
+    </div>
 </body>
+<script>
+    let inputBox = document.querySelector(".input-box"),
+        searchIcon = document.querySelector(".icon"),
+        closeIcon = document.querySelector(".close-icon");
+
+    searchIcon.addEventListener("click", () => inputBox.classList.add("open"));
+    closeIcon.addEventListener("click", () => inputBox.classList.remove("open"));
+</script>
 </html>
