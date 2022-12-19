@@ -107,6 +107,30 @@ html{
     top: 100px;
     border-radius: 6px;
     background: rgba(255, 255, 255, 0.746);
+    overflow: scroll;
+    
+  }
+  .historique::-webkit-scrollbar{
+    display: none;
+  }
+  .historique ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    gap: 20px;
+    text-decoration: none;
+    text-align: center;
+  }
+  .historique ul li{
+    font-size: 15px;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+    width: 100%;
+    text-decoration: none;
+    list-style: none;
+    padding: 5px;
   }
   .historique .top{
     width: 100%;
@@ -114,13 +138,13 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
-
   }
   .historique .top .color{
     background: #4070f4;
     height: 10px;
-    width: 50px;
+    width: 100px;
     border-radius: 5px;
+    position: fixed;
   }
   .params{
     position: absolute;
