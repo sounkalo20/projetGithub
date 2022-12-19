@@ -1,0 +1,82 @@
+#reglageZone{
+    font-family: Arial;
+    width: 146px;
+    border: 1px solid;
+    height: 500px;
+    padding: 10px;
+}
+
+#reglageZone  *{
+    margin: 0;
+    padding: 0;
+}
+
+#reglageZone .action{
+    background-color: rgba(198, 216, 247, 0.589);
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0px 5px 10px rgba(128, 128, 128, 0.63);
+}
+
+#reglageZone .actionName{
+    text-align: center;
+    text-decoration: underline;
+}
+
+#reglageZone .actionZone{
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    background: rgb(189, 216, 255);
+    padding: 5px;
+    border-radius: 7px;
+}
+
+#reglageZone .colorAction .colorPickerLabel div{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+#reglageZone .colorAction .colorPicker{
+    display: none;
+}
+
+#reglageZone .actionReseter{
+    cursor: pointer;
+    background: purple;
+    color: white;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+#reglageZone .backgroundColor1{
+    background-color: purple;
+}
+
+#reglageZone  .backgroundColor2{
+    background-color: blue;
+}
+
+#reglageZone .textColor1{
+    background-color: purple;
+}
+
+#reglageZone .textColor2{
+    background-color: black;
+}
+
+#reglageZone .composantColor1{
+    background-color: blue;
+}
+
+#reglageZone .composantColor2{
+    background-color: white;
+}
