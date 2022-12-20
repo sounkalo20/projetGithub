@@ -150,10 +150,10 @@ html{
     position: absolute;
     bottom: 10px;
     right: 10px;
-    width: 130px;
+    width: 150px;
     border: 1px solid rgba(255, 255, 255, 0.983);
     border-radius: 6px;
-    height: 40px;
+    height: 50px;
     background: rgba(255, 255, 255, 0.746);
   }
   .params .tools{
@@ -163,6 +163,7 @@ html{
     height: 100%;
     padding: 8px;
     color: #4070f4;
+    font-size: 20px;
   }
   .zone {
     display: flex;
@@ -243,11 +244,11 @@ html{
     border-radius: 3px;
   }
   .histo2{
-    position: absolute;
     right: 10px;
     top: initial;
     left: initial;
     height: initial;
-    bottom: 60px;
-    width: 130px;
+    bottom: 70px;
+    width: 150px;
+    padding: 10px;
   }

@@ -1,8 +1,5 @@
 #reglageZone{
-    font-family: Arial;
-    width: 130px;
-    border: 1px solid;
-    padding: 10px;
+    display: none;
 }
 
 #reglageZone  *{
@@ -81,16 +78,16 @@
 }
 
 #reglageZone .togglerZone{
-    border: 3px solid white;
-    width: 60px;
-    height: 30px;
+    width: 66px;
+    height: 36px;
     border-radius: 21px;
     padding: 3px;
-    
+    background: rgb(190, 190, 190);
+    border: 3px solid white;
 }
 
-#reglageZone .togglerZone div{
-    width: 50%;
+#reglageZone .togglerZone>div{
+    width:calc(50% - 3px);
     height: 100%;
     background: green ;
     border-radius: 50%;
@@ -98,5 +95,11 @@
     align-items: center;
     justify-content: center;
     color: white;
-    transition: all ease-in .2s;
+    transition: all ease-in .4s;
+    font-size: 12px;
+}
+
+#reglageZone .togglerZone>.togglerZone-inactive{
+    transform: translateX(30px) rotate(180deg);
+    background: rgb(184, 0, 0);
 }

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="./lib/fontawesome/css/all.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/parametre.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projet Github</title>
 </head>
@@ -72,13 +73,87 @@
             </ul>
         </div>
     </div>
-    <div class="historique histo2">
+    <div class="historique histo2" id="reglageZone">
         <div class="top">
             <div class="color"></div>
         </div>
-        <ul>
-         
-        </ul>
+        <div class="action colorAction background">
+            <h4 class="actionName ">background</h4>
+            <div class="actionZone ">
+                <label for="backgroundColor1" class="colorPickerLabel">
+                    <div class="backgroundColor1">1</div>
+                </label>
+                <input type="color" id="backgroundColor1" class="colorPicker">
+
+                <label for="backgroundColor2" class="colorPickerLabel">
+                    <div class="backgroundColor2">2</div>
+                </label>
+                <input type="color" id="backgroundColor2" class="colorPicker">
+
+                <i class="fa fa-refresh actionReseter"></i>
+            </div>
+            
+        </div>
+
+        <div class="action colorAction ">
+            <h4 class="actionName ">Text</h4>
+            <div class="actionZone ">
+                <label for="textColor1" class="colorPickerLabel">
+                    <div class="textColor1">1</div>
+                </label>
+                <input type="color" id="textColor1" class="colorPicker">
+
+                <label for="textColor2" class="colorPickerLabel">
+                    <div class="textColor2">2</div>
+                </label>
+                <input type="color" id="textColor2" class="colorPicker">
+
+                <i class="fa fa-refresh actionReseter"></i>
+            </div>
+            
+        </div>
+        
+        <div class="action colorAction ">
+            <h4 class="actionName ">Composant</h4>
+            <div class="actionZone ">
+                <label for="composantColor1" class="colorPickerLabel">
+                    <div class="composantColor1">1</div>
+                </label>
+                <input type="color" id="composantColor1" class="colorPicker">
+
+                <label for="composantColor2" class="colorPickerLabel">
+                    <div class="composantColor2">2</div>
+                </label>
+                <input type="color" id="composantColor2" class="colorPicker">
+
+                <i class="fa fa-refresh actionReseter"></i>
+            </div>
+            
+        </div>
+        
+        <div class="action togglerAction">
+            <h4 class="actionName ">Historique</h4>
+            <div class="actionZone ">
+                <div class="togglerZone ">
+                    <div class="historiqueToggler">
+                        <i class="fa fa-eye"></i>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="action togglerAction">
+            <h4 class="actionName ">Projet</h4>
+            <div class="actionZone ">
+                <div class="togglerZone ">
+                    <div class="projetToggler">
+                        <i class="fa fa-eye"></i>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
     </div>
 </div>
     <div class="params">
