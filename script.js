@@ -74,6 +74,7 @@ function afficherProfil(nom){
                 url: "https://api.github.com/users/"+nom+"/repos",
                 dataType: "JSON",
                 success: function (e1) {
+                    $('.profil .project').text('');
                     for(let i=0;i<e1.length;i++){
                         if(i==6){
                             break;
@@ -136,3 +137,14 @@ function afficherUserProposition(){
     
 }
 afficherUserProposition()
+
+let inputVal=$('.input-text').val();
+$('.input-text').change(function (e) { 
+    inputVal=$('.input-text').val();
+});
+
+$('.search-btn').click(function (e) { 
+    $('.historiqueTmp ul').append('<li>'+inputVal+'</li>');
+    afficherProfil(inputVal);
+    return false;
+});
