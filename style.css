@@ -23,16 +23,20 @@ html{
     padding: 20px; 
 }
 #title .image{
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    border: 1px solid black;
+    border: 5px solid purple;
+    overflow: hidden;
+}
+#title .image img{
+  width: 100%;
 }
 .container{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 3%;
 }
 
 .zone .input-box{
@@ -263,4 +267,8 @@ html{
   }
   .historique-failed{
     color: red;
+  }
+
+  .search-btn{
+    border: none;
   }
