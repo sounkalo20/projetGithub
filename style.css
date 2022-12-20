@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+a{
+  text-decoration: none;
+  color: white;
+}
 body{
     height: 100vh;
     background: linear-gradient(45deg,rgba(171, 4, 171, 0.699) 40%,rgba(5, 5, 172, 0.722));
@@ -108,6 +112,7 @@ html{
     border-radius: 6px;
     background: rgba(255, 255, 255, 0.746);
     overflow: scroll;
+    display: none;
     
   }
   .historique::-webkit-scrollbar{
@@ -164,6 +169,7 @@ html{
     padding: 8px;
     color: #4070f4;
     font-size: 20px;
+    cursor: pointer;
   }
   .zone {
     display: flex;
@@ -251,4 +257,10 @@ html{
     bottom: 70px;
     width: 150px;
     padding: 10px;
+  }
+  .historique-success{
+    color: green;
+  }
+  .historique-failed{
+    color: red;
   }
