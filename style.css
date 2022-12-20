@@ -221,6 +221,13 @@ html{
     gap: 10px;
     margin-top: 10px;
   }
+  .zone .profil .description .follow span:nth-child(1) i{
+    color: rgba(255, 0, 0, 0.825);
+  }.zone .profil .description .follow span:nth-child(2) i{
+    color: rgba(0, 0, 255, 0.795);
+  }.zone .profil .description .follow span:nth-child(3) i{
+    color: peru;
+  }
   .zone .profil .description .project{
     display: flex;
     align-items: center;
@@ -235,4 +242,12 @@ html{
     color: whitesmoke;
     border-radius: 3px;
   }
-  
+  .histo2{
+    position: absolute;
+    right: 10px;
+    top: initial;
+    left: initial;
+    height: initial;
+    bottom: 60px;
+    width: 130px;
+  }
