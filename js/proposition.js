@@ -4,17 +4,17 @@ $('#proposition .propositionCloser').click(function (e) {
 });
 
 
-$("#proposition .propositionCard").click(function (e) { 
-    activePropositions($(this))
-});
+// $("#proposition .propositionCard").click(function (e) { 
+//     activePropositions(this)
+// });
 
 // for set the focus on the selected proposition
 function activePropositions(e){
     $("#proposition .propositionCard").removeClass('propositionCardActive')
     $("#proposition .propositionCard .infoZone").slideUp()
     $("#proposition .propositionCard").css('filter', 'blur(3px)');
-    e.addClass("propositionCardActive");
-    e.css('filter', 'blur(0px)');
+    $(e).addClass("propositionCardActive");
+    $(e).css('filter', 'blur(0px)');
     
     e.children().slideDown();
 }

@@ -1,10 +1,10 @@
 .propositionBackground{
-    background-image: url("../images/logo.jpg");
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    display: none;
 }
 
 #proposition{
@@ -69,11 +69,13 @@
 
 #proposition .userImage{
     width: 100px;
-    margin-top: -50%;
+    height: 100px;
+    margin-top: -50px;
 }
 
 #proposition .userImage img{
     width: calc(100% - 14px);
+    object-fit: cover;
     border: 7px solid rgba(128, 0, 128, 0.644);
     border-radius:53% 47% 34% 66% / 60% 68% 32% 40% ;
 }
@@ -84,7 +86,7 @@
     padding:10px 20px;
     border-radius: 10px;
     margin-top: 15px;
-    display: none;
+    /* display: none; */
 }
 
 #proposition .projectList{
