@@ -96,7 +96,7 @@ function afficherUserProposition(){
             url: "https://api.github.com/users/"+tab[i],
             dataType: "JSON",
             success: function (response) {
-                let component='<div class="propositionCard '+ tab[i]+'" onclick="activePropositions("$(".'+tab[i]+'")")">'+
+                let component='<div class="propositionCard '+ tab[i]+'">'+
                     '<div style="display: flex; justify-content: center;">'+
                         '<div class="userImage">'+
                             '<img src="'+response.avatar_url+'" alt="">'+
@@ -128,9 +128,6 @@ function afficherUserProposition(){
 
                             $('.'+tab[i]+' .infoZone').prepend(component2);
                         }
-                        $("#proposition .propositionCard").click(function (e) { 
-                            activePropositions('this')
-                        });
                     }
                 });
             }

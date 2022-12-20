@@ -4,9 +4,9 @@ $('#proposition .propositionCloser').click(function (e) {
 });
 
 
-$("#proposition .propositionCard").click(function (e) { 
-    activePropositions(this)
-});
+// $("#proposition .propositionCard").click(function (e) { 
+//     activePropositions(this)
+// });
 
 // for set the focus on the selected proposition
 function activePropositions(e){
