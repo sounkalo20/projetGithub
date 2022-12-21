@@ -1,0 +1,127 @@
+.propositionBackground{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+}
+
+#proposition{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial;
+    backdrop-filter: blur(10px);
+}
+
+#proposition a{
+    text-decoration: none;
+}
+
+#proposition .propositionCloser{
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: all ease-in .2s;
+    cursor: pointer;
+    color: red;
+}
+
+#proposition .propositionCloser:hover{
+    color: rgb(184, 0, 0);
+    transform: rotate(45deg) scale(1.5);
+}
+
+#proposition .propositionMain{
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(226, 204, 224, 0.329);
+    border-radius: 20px;
+}
+
+#proposition .propositionCard{
+    padding:10px 30px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all ease-in .15s;
+    height: fit-content;
+    box-shadow: 0px 10px 15px rgba(128, 128, 128, 0.623);
+    -webkit-backdrop-filter: blur(5px);
+    background: white;
+}
+
+#proposition .propositionCardActive{
+    box-shadow: 0px 10px 30px rgba(128, 128, 128, 0.795);
+    transform: scale(1.2);
+    filter:blur(0px);
+}
+
+#proposition .userImage{
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+}
+
+#proposition .userImage img{
+    width: calc(100% - 14px);
+    object-fit: cover;
+    border: 7px solid rgba(128, 0, 128, 0.644);
+    border-radius:53% 47% 34% 66% / 60% 68% 32% 40% ;
+}
+
+#proposition .infoZone{
+    color: white;
+    background: rgba(148, 3, 148, 0.596);
+    padding:10px 20px;
+    border-radius: 10px;
+    margin-top: 15px;
+    /* display: none; */
+}
+
+#proposition .projectList{
+    margin: 15px 0;
+}
+
+#proposition .projectList .projetName{
+    background: rgb(255, 255, 255);
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    border-radius: 5px;
+
+}
+
+#proposition .projectList .projetIcone{
+    font-size: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 0px 5px white);
+}
+
+#proposition .infoZone>p{
+    margin-top: 30px;
+}
+
+#proposition .voirPlus{
+    padding: 5px 10px;
+    background: rgb(0, 0, 0);
+    border: 2px solid;
+    border-radius: 5px;
+    transition: all ease-in .2s;
+}
+
+#proposition .voirPlus:hover{
+    background: white;
+    border-color: black;
+    color: black;
+}

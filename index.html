@@ -4,86 +4,175 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="./lib/fontawesome/css/all.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/parametre.css">
+    <link rel="stylesheet" href="css/proposition.css">
+    <script src="./lib/jquery-3.6.1.min.js"></script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projet Github</title>
 </head>
 <body>
     <header class="title" id="title">
         <div class="name">
-            <div class="image"></div>
+            <div class="image">
+                <img src="images/younouss.png" alt="">
+            </div>
             <div class="image"></div>
         </div>
     </header>
     <div class="container">
         <div class="zone">
             <form class="input-box">
-                <input type="text" placeholder="username...">
-                <span class="icon">
+                <input class="input-text" type="text" placeholder="username...">
+                <button type="submit" class="icon search-btn">
                     <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                </span>
+                </button>
                 <i class="fa-solid fa-xmark close-icon"></i>
             </form>
             <div class="profil">
-                    <div class="image"><img src="logo.png" alt=""></div>
-                    <div class="description">
-                        <h2 class="name">Nom</h2>
-                        <p class="bio"> <b>Bio:</b> <br>
+                <div class="image"><img src="images/logo.png" alt=""></div>
+                <div class="description">
+                    <h2 class="name">Nom</h2>
+                    <p class="bio"> <b>Bio:</b> <br>
+                        <span>
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut qui ab aliquid saepe eaque esse 
-                        </p>
-                        <div class="follow">
-                            <span>10 <i class="fa fa-heart"></i></span><span>20<i class="fa fa-heart"></i></span><span>30 <i class="fa-solid fa-book"></i></span>
-                        </div>
-                        <div class="project">
-                            <span>projet1</span>  <span>projet2</span>  <span>projet2</span>  
-                            <span>projet2</span>  <span>projet1</span>  <span>projet1</span>
-                        </div>
+                        </span>
+                    </p>
+                    <div class="follow">
+                        <span><span class="followers">10</span> <i class="fa fa-heart"></i></span>
+                        <span><span class="following">10</span> <i class="fa-solid fa-thumbs-up"></i></span>
+                        <span><span class="public_repos">10</span> <i class="fa-solid fa-book"></i></span>
                     </div>
-                   
+                    <div class="project">
+                        <!-- //liste des projets                 -->
+                    </div>
+                </div>    
             </div>
         </div>
-        <div class="historique">
+        <div class="historique historiqueTmp">
             <div class="top">
                 <div class="color"></div>
             </div>
             <ul>
-                <li>historique</li>
-                <li>historique</li>
-                <li>historique</li>
-                <li>historique</li>
-                <li>historique</li>
-                <li>historique</li>
-                <li>historique</li>
-                <li>historique</li>
-                <li>historique</li>
-                <li>historique</li>
-                <li>historique</li>
-                <li>historique</li>
-                <li>historique</li>
-                <li>historique</li>
-                <li>historique</li>
-                <li>historique</li>
-                <li>historique</li>
-                <li>historique</li>
-                <li>historique</li>
-                <li>historique</li>
+                <!-- on affichera l'historique -->
             </ul>
         </div>
     </div>
+
+    <div class="propositionBackground">
+        <div id="proposition">
+        
+            <i class="fa fa-close propositionCloser"></i>
+            
+            
+            <div class="propositionMain ">
+              <!-- liste des utilisateurs  -->
+              
+            </div>
+                
+        </div>
+    </div>
+
+    <div class="historique histo2" id="reglageZone">
+        
+        <div class="top">
+            <div class="color"></div>
+        </div>
+        <div class="action colorAction background">
+            <h4 class="actionName ">background</h4>
+            <div class="actionZone ">
+                <label for="backgroundColor1" class="colorPickerLabel">
+                    <div class="backgroundColor1">1</div>
+                </label>
+                <input type="color" id="backgroundColor1" class="colorPicker">
+
+                <label for="backgroundColor2" class="colorPickerLabel">
+                    <div class="backgroundColor2">2</div>
+                </label>
+                <input type="color" id="backgroundColor2" class="colorPicker">
+
+                <i class="fa fa-refresh actionReseter"></i>
+            </div>
+            
+        </div>
+
+        <div class="action colorAction ">
+            <h4 class="actionName ">Text</h4>
+            <div class="actionZone ">
+                <label for="textColor1" class="colorPickerLabel">
+                    <div class="textColor1">1</div>
+                </label>
+                <input type="color" id="textColor1" class="colorPicker">
+
+                <label for="textColor2" class="colorPickerLabel">
+                    <div class="textColor2">2</div>
+                </label>
+                <input type="color" id="textColor2" class="colorPicker">
+
+                <i class="fa fa-refresh actionReseter"></i>
+            </div>
+            
+        </div>
+        
+        <div class="action colorAction ">
+            <h4 class="actionName ">Composant</h4>
+            <div class="actionZone ">
+                <label for="composantColor1" class="colorPickerLabel">
+                    <div class="composantColor1">1</div>
+                </label>
+                <input type="color" id="composantColor1" class="colorPicker">
+
+                <label for="composantColor2" class="colorPickerLabel">
+                    <div class="composantColor2">2</div>
+                </label>
+                <input type="color" id="composantColor2" class="colorPicker">
+
+                <i class="fa fa-refresh actionReseter"></i>
+            </div>
+            
+        </div>
+        
+        <div class="action togglerAction">
+            <h4 class="actionName ">Historique</h4>
+            <div class="actionZone ">
+                <div class="togglerZone ">
+                    <div class="historiqueToggler togglerZone-inactive">
+                        <i class="fa fa-eye"></i>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="action togglerAction">
+            <h4 class="actionName ">Projet</h4>
+            <div class="actionZone ">
+                <div class="togglerZone ">
+                    <div class="projetToggler">
+                        <i class="fa fa-eye"></i>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+</div>
+
     <div class="params">
         <div class="tools">
-            <i class="fa-sharp fa-solid fa-wifi"></i>
+            <i class="fa-sharp fa-solid fa-wifi" title=""></i>
             <i class="fa-solid fa-gear"></i>
             <i class="fa-solid fa-user"></i>
         </div>
     </div>
-</body>
-<script>
-    let inputBox = document.querySelector(".input-box"),
-        searchIcon = document.querySelector(".icon"),
-        closeIcon = document.querySelector(".close-icon");
+    <script src="js/proposition.js"></script>
 
-    searchIcon.addEventListener("click", () => inputBox.classList.add("open"));
-    closeIcon.addEventListener("click", () => inputBox.classList.remove("open"));
-</script>
+    <script src="js/script.js"></script>
+    
+
+</body>
+
+  
 </html>
