@@ -131,9 +131,16 @@ function afficherUserProposition(){
                         }
                     }
                 });
+                $('.'+tab[i]+" .voirPlus").click(function (e) { 
+                    afficherProfil(tab[i]);
+                    $(".propositionBackground").fadeOut(300);
+                });
             }
         });
+        
     }
+
+    
     
 }
 afficherUserProposition()
