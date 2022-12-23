@@ -25,24 +25,24 @@
         <div class="zone">
             <form class="input-box">
                 <input class="input-text" type="text" placeholder="username...">
-                <button type="submit" class="icon search-btn">
-                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <button type="submit" class="icon search-btn componantIconColor">
+                    <i class="fa-solid fa-magnifying-glass search-icon "></i>
                 </button>
                 <i class="fa-solid fa-xmark close-icon"></i>
             </form>
-            <div class="profil">
+            <div class="profil allBackgroundColor">
                 <div class="image"><img src="images/logo.png" alt=""></div>
                 <div class="description">
                     <h2 class="name">Nom</h2>
                     <p class="bio"> <b>Bio:</b> <br>
-                        <span>
+                        <span class="allText">
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut qui ab aliquid saepe eaque esse 
                         </span>
                     </p>
                     <div class="follow">
-                        <span><span class="followers">10</span> <i class="fa fa-heart"></i></span>
-                        <span><span class="following">10</span> <i class="fa-solid fa-thumbs-up"></i></span>
-                        <span><span class="public_repos">10</span> <i class="fa-solid fa-book"></i></span>
+                        <span><span class="followers allText">10</span> <i class="fa fa-heart"></i></span>
+                        <span><span class="following allText">10</span> <i class="fa-solid fa-thumbs-up"></i></span>
+                        <span><span class="public_repos allText">10</span> <i class="fa-solid fa-book"></i></span>
                     </div>
                     <div class="project">
                         <!-- //liste des projets                 -->
@@ -50,11 +50,11 @@
                 </div>    
             </div>
         </div>
-        <div class="historique historiqueTmp">
+        <div class="historique historiqueTmp allBackgroundColor">
             <div class="top">
-                <div class="color"></div>
+                <div class="color componantBackgroundColor"></div>
             </div>
-            <ul>
+            <ul class="allText">
                 <!-- on affichera l'historique -->
             </ul>
         </div>
@@ -74,10 +74,10 @@
         </div>
     </div>
 
-    <div class="historique histo2" id="reglageZone">
+    <div class="historique histo2 allBackgroundColor" id="reglageZone">
         
         <div class="top">
-            <div class="color"></div>
+            <div class="color componantBackgroundColor"></div>
         </div>
         <div class="action colorAction background">
             <h4 class="actionName ">background</h4>
@@ -92,7 +92,7 @@
                 </label>
                 <input type="color" id="backgroundColor2" class="colorPicker">
 
-                <i class="fa fa-refresh actionReseter"></i>
+                <i class="fa fa-refresh actionReseter backgroundReset"></i>
             </div>
             
         </div>
@@ -110,7 +110,7 @@
                 </label>
                 <input type="color" id="textColor2" class="colorPicker">
 
-                <i class="fa fa-refresh actionReseter"></i>
+                <i class="fa fa-refresh actionReseter textReset"></i>
             </div>
             
         </div>
@@ -128,7 +128,7 @@
                 </label>
                 <input type="color" id="composantColor2" class="colorPicker">
 
-                <i class="fa fa-refresh actionReseter"></i>
+                <i class="fa fa-refresh actionReseter composantReset"></i>
             </div>
             
         </div>
@@ -160,8 +160,8 @@
     
 </div>
 
-    <div class="params">
-        <div class="tools">
+    <div class="params allBackgroundColor">
+        <div class="tools componantIconColor">
             <i class="fa-sharp fa-solid fa-wifi" title=""></i>
             <i class="fa-solid fa-gear"></i>
             <i class="fa-solid fa-user"></i>
