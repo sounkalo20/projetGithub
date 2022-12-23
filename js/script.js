@@ -1,10 +1,11 @@
 // animation de linput
 let inputBox = document.querySelector(".input-box"),
-        searchIcon = document.querySelector(".icon"),
-        closeIcon = document.querySelector(".close-icon");
+    searchIcon = document.querySelector(".icon"),
+    closeIcon = document.querySelector(".close-icon");
 
 searchIcon.addEventListener("click", () => inputBox.classList.add("open"));
 closeIcon.addEventListener("click", () => inputBox.classList.remove("open"));
+
 
 // on ajoute a lhistorique le mot saisie en fonction du resultat de la requete
 function listHistorique(e, stat){
@@ -83,6 +84,13 @@ function afficherProfil(nom){
                     }
                 }
             });
+
+            listHistorique(nom, true);
+
+        },
+        error: function(){
+            listHistorique(nom, false);
+
         }
     });
 }
@@ -151,8 +159,9 @@ $('.input-text').change(function (e) {
 });
 
 $('.search-btn').click(function (e) { 
-    $('.historiqueTmp ul').append('<li>'+inputVal+'</li>');
-    afficherProfil(inputVal);
+    if(inputVal!=''){
+        afficherProfil(inputVal);
+    }
     return false;
 });
 
