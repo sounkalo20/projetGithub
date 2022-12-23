@@ -1,10 +1,11 @@
 // animation de linput
 let inputBox = document.querySelector(".input-box"),
-        searchIcon = document.querySelector(".icon"),
-        closeIcon = document.querySelector(".close-icon");
+    searchIcon = document.querySelector(".icon"),
+    closeIcon = document.querySelector(".close-icon");
 
 searchIcon.addEventListener("click", () => inputBox.classList.add("open"));
 closeIcon.addEventListener("click", () => inputBox.classList.remove("open"));
+
 
 // on ajoute a lhistorique le mot saisie en fonction du resultat de la requete
 function listHistorique(e, stat){
@@ -79,10 +80,17 @@ function afficherProfil(nom){
                         if(i==6){
                             break;
                         }
-                        $('.profil .project').append('<span><a target="_blank" href="'+e1[i].html_url+'">'+e1[i].name+'</a></span>');
+                        $('.profil .project').append('<span><a target="_blank" class="allText" href="'+e1[i].html_url+'">'+e1[i].name+'</a></span>');
                     }
                 }
             });
+
+            listHistorique(nom, true);
+
+        },
+        error: function(){
+            listHistorique(nom, false);
+
         }
     });
 }
@@ -151,7 +159,103 @@ $('.input-text').change(function (e) {
 });
 
 $('.search-btn').click(function (e) { 
-    $('.historiqueTmp ul').append('<li>'+inputVal+'</li>');
-    afficherProfil(inputVal);
+    if(inputVal!=''){
+        afficherProfil(inputVal);
+    }
     return false;
+});
+
+let backgroundcolor1=$("#backgroundColor1").val();
+let backgroundcolor2=$("#backgroundColor2").val();
+//background animation
+$("#backgroundColor1").on("input", function () {
+     backgroundcolor1=$("#backgroundColor1").val();
+});
+$("#backgroundColor2").on("input", function () {
+     backgroundcolor2=$("#backgroundColor2").val();
+});
+
+$(".background input").on("input", function () {
+    changeBackgroundColor();
+});
+let rotate1=0;
+let rotate2=0;
+let rotate3=0;
+$(".backgroundReset").click(function (e) { 
+    backgroundcolor1="rgba(171, 4, 171, 0.699)"
+    backgroundcolor2="rgba(5, 5, 172, 0.722)"
+    changeBackgroundColor();
+    rotate1+=180;
+    $(this).css("transform", "rotate("+parseInt(rotate1)+"deg)");
+});
+
+function changeBackgroundColor(){
+    $(".backgroundColor1").css("background", backgroundcolor1);
+    $(".backgroundColor2").css("background", backgroundcolor2);
+    $("body").css("background", "linear-gradient(45deg,"+backgroundcolor1+" 40%, "+backgroundcolor2);
+}
+
+//change text color
+let textColor1=$("#textColor1").val();
+
+$("#textColor1").on("input", function () {
+     textColor1=$("#textColor1").val();
+     changeTextColor(textColor1)
+});
+let textColor2=$("#textColor2").val();
+
+$("#textColor2").on("input", function () {
+    textColor2=$("#textColor2").val();
+     changeTextColor2(textColor2)
+});
+
+function changeTextColor(value){
+    $('.profil .image img').css("border-color",value)
+    $('#title .image').css("border-color",value)
+    $('.profil .name').css("color",value)
+    $('.profil .bio b').css("color",value)
+    $('.profil .project span').css("background",value)
+    $(".textColor1").css("background", value);
+}
+function changeTextColor2(value){
+    $('.allText').css("color",value)
+    $(".textColor2").css("background", value);
+}
+    
+$(".textReset").click(function (e) { 
+    rotate2+=180;
+    $(this).css("transform", "rotate("+parseInt(rotate2)+"deg)");
+    changeTextColor("purple")
+    changeTextColor2("white")
+});
+
+//components color
+
+let componantColor1=$("#composantColor1").val();
+let componantColor2=$("#composantColor2").val();
+
+$("#composantColor1").on("input", function () {
+    componantColor1=$("#composantColor1").val()
+    changeComposentColor1(componantColor1);
+});
+$("#composantColor2").on("input", function () {
+    componantColor2=$("#composantColor2").val()
+    changeComposentColor2(componantColor2);
+});
+
+function changeComposentColor1(value){
+    $(".componantBackgroundColor").css("background", value);
+    $(".componantIconColor i").css("color", value);
+    $(".composantColor1").css("background", value);
+}
+function changeComposentColor2(value){
+    $(".composantColor2").css("background", value);
+    $(".allBackgroundColor").css("background", value);
+}
+
+$(".composantReset").click(function (e) { 
+    rotate3+=180;
+    $(this).css("transform", "rotate("+parseInt(rotate3)+"deg)");
+    changeComposentColor2("rgba(255, 255, 255, 0.746)")
+    changeComposentColor1("#4070f4")
 });
