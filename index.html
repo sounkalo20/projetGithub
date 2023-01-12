@@ -1,178 +1,207 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="./lib/fontawesome/css/all.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/parametre.css">
-    <link rel="stylesheet" href="css/proposition.css">
-    <script src="./lib/jquery-3.6.1.min.js"></script>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="./lib/fontawesome/css/all.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/parametre.css">
+        <link rel="stylesheet" href="css/proposition.css">
+        <script src="./lib/jquery-3.6.1.min.js"></script>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet Github</title>
-</head>
-<body>
-    <header class="title" id="title">
-        <div class="name">
-            <div class="image">
-                <img src="images/younouss.png" alt="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projet Github</title>
+    </head>
+
+    <body>
+        <header class="title" id="title">
+            <div class="name">
+                <div class="image">
+                    <img src="images/younouss.png" alt="">
+                </div>
+
+                <div class="image">
+                    <img src="images/sounk.jpg" alt="">
+                </div>
             </div>
-            <div class="image"></div>
+        </header>
+
+        <div class="container">
+            <div class="zone">
+                <form class="input-box">
+                    <input class="input-text" type="text" placeholder="username...">
+                    <button type="submit" class="icon search-btn componantIconColor">
+                        <i class="fa-solid fa-magnifying-glass search-icon "></i>
+                    </button>
+                    <i class="fa-solid fa-xmark close-icon"></i>
+                </form>
+
+                <div class="profil allBackgroundColor">
+                    <div class="image">
+                        <img src="images/logo.png" alt="">
+                    </div>
+                    <div class="description">
+                        <h2 class="name">Nom</h2>
+
+                        <p class="bio"> 
+                            <b>Bio:</b> 
+                            <br>
+                            <span class="allText">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut qui ab aliquid saepe eaque esse 
+                            </span>
+                        </p>
+
+                        <div class="follow">
+                            <span>
+                                <span class="followers allText">10</span> 
+                                <i class="fa fa-heart"></i>
+                            </span>
+
+                            <span>
+                                <span class="following allText">10</span> 
+                                <i class="fa-solid fa-thumbs-up"></i>
+                            </span>
+
+                            <span>
+                                <span class="public_repos allText">10</span> 
+                                <i class="fa-solid fa-book"></i>
+                            </span>
+                        </div>
+
+                        <div class="project">
+                            <!-- //liste des projets                 -->
+                        </div>
+                    </div>    
+                </div>
+            </div>
+
+            <div class="historique historiqueTmp allBackgroundColor">
+                <div class="top">
+                    <div class="color componantBackgroundColor"></div>
+                </div>
+                <ul class="allText">
+                    <!-- on affichera l'historique -->
+                </ul>
+            </div>
         </div>
-    </header>
-    <div class="container">
-        <div class="zone">
-            <form class="input-box">
-                <input class="input-text" type="text" placeholder="username...">
-                <button type="submit" class="icon search-btn componantIconColor">
-                    <i class="fa-solid fa-magnifying-glass search-icon "></i>
-                </button>
-                <i class="fa-solid fa-xmark close-icon"></i>
-            </form>
-            <div class="profil allBackgroundColor">
-                <div class="image"><img src="images/logo.png" alt=""></div>
-                <div class="description">
-                    <h2 class="name">Nom</h2>
-                    <p class="bio"> <b>Bio:</b> <br>
-                        <span class="allText">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut qui ab aliquid saepe eaque esse 
-                        </span>
-                    </p>
-                    <div class="follow">
-                        <span><span class="followers allText">10</span> <i class="fa fa-heart"></i></span>
-                        <span><span class="following allText">10</span> <i class="fa-solid fa-thumbs-up"></i></span>
-                        <span><span class="public_repos allText">10</span> <i class="fa-solid fa-book"></i></span>
-                    </div>
-                    <div class="project">
-                        <!-- //liste des projets                 -->
-                    </div>
+
+        <div class="propositionBackground">
+            <div id="proposition">
+                <i class="fa fa-close propositionCloser"></i>
+                
+                <div class="propositionMain ">
+                <!-- liste des utilisateurs  -->
                 </div>    
             </div>
         </div>
-        <div class="historique historiqueTmp allBackgroundColor">
+
+        <div class="historique histo2 allBackgroundColor" id="reglageZone">
             <div class="top">
                 <div class="color componantBackgroundColor"></div>
             </div>
-            <ul class="allText">
-                <!-- on affichera l'historique -->
-            </ul>
-        </div>
-    </div>
 
-    <div class="propositionBackground">
-        <div id="proposition">
-        
-            <i class="fa fa-close propositionCloser"></i>
-            
-            
-            <div class="propositionMain ">
-              <!-- liste des utilisateurs  -->
-              
-            </div>
+            <div class="action colorAction background">
+                <h4 class="actionName ">background</h4>
+
+                <div class="actionZone ">
+                    <label for="backgroundColor1" class="colorPickerLabel">
+                        <div class="backgroundColor1">1</div>
+                    </label>
+
+                    <input type="color" id="backgroundColor1" class="colorPicker">
+
+                    <label for="backgroundColor2" class="colorPickerLabel">
+                        <div class="backgroundColor2">2</div>
+                    </label>
+
+                    <input type="color" id="backgroundColor2" class="colorPicker">
+
+                    <i class="fa fa-refresh actionReseter backgroundReset"></i>
+                </div>
                 
-        </div>
-    </div>
+            </div>
 
-    <div class="historique histo2 allBackgroundColor" id="reglageZone">
-        
-        <div class="top">
-            <div class="color componantBackgroundColor"></div>
-        </div>
-        <div class="action colorAction background">
-            <h4 class="actionName ">background</h4>
-            <div class="actionZone ">
-                <label for="backgroundColor1" class="colorPickerLabel">
-                    <div class="backgroundColor1">1</div>
-                </label>
-                <input type="color" id="backgroundColor1" class="colorPicker">
+            <div class="action colorAction ">
+                <h4 class="actionName ">Text</h4>
 
-                <label for="backgroundColor2" class="colorPickerLabel">
-                    <div class="backgroundColor2">2</div>
-                </label>
-                <input type="color" id="backgroundColor2" class="colorPicker">
+                <div class="actionZone ">
+                    <label for="textColor1" class="colorPickerLabel">
+                        <div class="textColor1">1</div>
+                    </label>
 
-                <i class="fa fa-refresh actionReseter backgroundReset"></i>
+                    <input type="color" id="textColor1" class="colorPicker">
+
+                    <label for="textColor2" class="colorPickerLabel">
+                        <div class="textColor2">2</div>
+                    </label>
+
+                    <input type="color" id="textColor2" class="colorPicker">
+
+                    <i class="fa fa-refresh actionReseter textReset"></i>
+                </div>
+                
             </div>
             
-        </div>
+            <div class="action colorAction ">
+                <h4 class="actionName ">Composant</h4>
 
-        <div class="action colorAction ">
-            <h4 class="actionName ">Text</h4>
-            <div class="actionZone ">
-                <label for="textColor1" class="colorPickerLabel">
-                    <div class="textColor1">1</div>
-                </label>
-                <input type="color" id="textColor1" class="colorPicker">
+                <div class="actionZone ">
+                    <label for="composantColor1" class="colorPickerLabel">
+                        <div class="composantColor1">1</div>
+                    </label>
 
-                <label for="textColor2" class="colorPickerLabel">
-                    <div class="textColor2">2</div>
-                </label>
-                <input type="color" id="textColor2" class="colorPicker">
+                    <input type="color" id="composantColor1" class="colorPicker">
 
-                <i class="fa fa-refresh actionReseter textReset"></i>
+                    <label for="composantColor2" class="colorPickerLabel">
+                        <div class="composantColor2">2</div>
+                    </label>
+
+                    <input type="color" id="composantColor2" class="colorPicker">
+
+                    <i class="fa fa-refresh actionReseter composantReset"></i>
+                </div>
+                
             </div>
             
-        </div>
-        
-        <div class="action colorAction ">
-            <h4 class="actionName ">Composant</h4>
-            <div class="actionZone ">
-                <label for="composantColor1" class="colorPickerLabel">
-                    <div class="composantColor1">1</div>
-                </label>
-                <input type="color" id="composantColor1" class="colorPicker">
+            <div class="action togglerAction">
+                <h4 class="actionName ">Historique</h4>
 
-                <label for="composantColor2" class="colorPickerLabel">
-                    <div class="composantColor2">2</div>
-                </label>
-                <input type="color" id="composantColor2" class="colorPicker">
-
-                <i class="fa fa-refresh actionReseter composantReset"></i>
-            </div>
-            
-        </div>
-        
-        <div class="action togglerAction">
-            <h4 class="actionName ">Historique</h4>
-            <div class="actionZone ">
-                <div class="togglerZone ">
-                    <div class="historiqueToggler togglerZone-inactive">
-                        <i class="fa fa-eye"></i>
+                <div class="actionZone ">
+                    <div class="togglerZone ">
+                        <div class="historiqueToggler togglerZone-inactive">
+                            <i class="fa fa-eye"></i>
+                        </div>
                     </div>
                 </div>
+                
             </div>
             
-        </div>
-        
-        <div class="action togglerAction">
-            <h4 class="actionName ">Projet</h4>
-            <div class="actionZone ">
-                <div class="togglerZone ">
-                    <div class="projetToggler">
-                        <i class="fa fa-eye"></i>
+            <div class="action togglerAction">
+                <h4 class="actionName ">Projet</h4>
+
+                <div class="actionZone ">
+                    <div class="togglerZone ">
+                        <div class="projetToggler">
+                            <i class="fa fa-eye"></i>
+                        </div>
                     </div>
                 </div>
+                
             </div>
-            
         </div>
-    </div>
-    
-</div>
 
-    <div class="params allBackgroundColor">
-        <div class="tools componantIconColor">
-            <i class="fa-sharp fa-solid fa-wifi" title=""></i>
-            <i class="fa-solid fa-gear"></i>
-            <i class="fa-solid fa-user"></i>
+        <div class="params allBackgroundColor">
+            <div class="tools componantIconColor">
+                <i class="fa-sharp fa-solid fa-wifi" title=""></i>
+
+                <i class="fa-solid fa-gear"></i>
+
+                <i class="fa-solid fa-user"></i>
+            </div>
         </div>
-    </div>
-    <script src="js/proposition.js"></script>
 
-    <script src="js/script.js"></script>
-    
+        <h1 class="popup">Cet Utilisateur n'existe pas</h1>
 
-</body>
-
-  
+        <script src="js/script.js"></script>
+    </body>
 </html>

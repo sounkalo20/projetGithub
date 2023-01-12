@@ -272,3 +272,15 @@ html{
   .search-btn{
     border: none;
   }
+
+.popup{
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 5px;
+  background: white;
+  color: purple;
+}
