@@ -6,6 +6,8 @@ let inputBox = document.querySelector(".input-box"),
 searchIcon.addEventListener("click", () => inputBox.classList.add("open"));
 closeIcon.addEventListener("click", () => inputBox.classList.remove("open"));
 
+$(".popup").hide();
+
 // on verifie la connexion
 function verifierConnexion(){
     if(navigator.onLine){
@@ -88,6 +90,7 @@ function afficherProfil(nom){
         error: function(){
             //on archive dans l'historique avec une erreur
             listHistorique(nom, false);
+            popup(nom+ " n'existe pas")
         }
     });
 
@@ -278,3 +281,11 @@ $(".composantReset").click(function (e) {
     changeComposentColor2("rgba(255, 255, 255, 0.746)")
     changeComposentColor1("#4070f4")
 });
+
+function popup(text){
+    $(".popup").slideDown(500);
+    $(".popup").text(text);
+    setTimeout(function(){
+        $(".popup").slideUp(500);
+    },3000);
+}
